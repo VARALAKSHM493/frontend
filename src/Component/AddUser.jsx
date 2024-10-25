@@ -24,7 +24,7 @@ export default function AddUser() {
         e.preventDefault();
 
         try {
-            const adduser = await axios.post('http://localhost:8000/api/create', value)
+            const adduser = await axios.post('https://backend-lx8t.onrender.com/api/create', value)
             const response = adduser.data
             if (response.success) {
                 toast.success(response.Message)
